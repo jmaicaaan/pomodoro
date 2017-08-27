@@ -1,7 +1,7 @@
 {
-  "name": "angular-starter",
+  "name": "pomodoro",
   "version": "0.0.0",
-  "description": "Angular Starter Pack",
+  "description": "In completion of FreeCodeCamp front end certificate - A pomodoro written in javascript",
   "main": "index.js",
   "private": true,
   "dependencies": {
@@ -20,8 +20,8 @@
   "engines": {
     "node": "7.x"
   },
-  "homepage": "",
-  "basePath": "",
+  "homepage": "https://jmaicaaan.github.io/pomodoro/",
+  "basePath": "/pomodoro/",
   "devDependencies": {
     "@types/jquery": "^3.2.4",
     "@types/tether": "^1.4.2",
