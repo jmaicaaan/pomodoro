@@ -1,0 +1,15 @@
+.pomdoro
+  div(layout="row")
+    md-card
+      md-card-content
+        div(layout="row")
+          .hour
+            | {{ $ctrl.countdown.hour || 0 }} hour
+          .minute 
+            | {{ $ctrl.countdown.minute || 00 }} minutes
+          .second
+            | {{ $ctrl.countdown.second || 00 }} seconds
+      md-card-actions(layout='row', layout-align='end center')
+        md-button(ng-click="$ctrl.stopTimer();") Stop
+        |     
+        md-button(ng-click="$ctrl.startTimer();") Start
