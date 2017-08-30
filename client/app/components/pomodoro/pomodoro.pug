@@ -12,9 +12,18 @@
               | {{ $ctrl.countdown.minute || 00 }} minutes
             .second
               | {{ $ctrl.countdown.second || 00 }} seconds
+          div(ng-if="$ctrl.isTimerStarted")
+            div(layout='')
+              div(flex='25', layout='', layout-align='center center')
+                span.md-body-1 Second
+              md-slider(flex='', ng-model='$ctrl.countdown.second', step='1', min='0', max='60', aria-label='rating' disabled)
+            div(layout='')
+              div(flex='25', layout='', layout-align='center center')
+                span.md-body-1 Minute
+              md-slider(flex='', ng-model='$ctrl.countdown.minute', step='1', min='0', max='60', aria-label='rating' disabled)
         md-card-actions(layout="row", layout-align="end center")
           md-button(ng-click="$ctrl.stopTimer();") Stop
           |     
           md-button(ng-click="$ctrl.resetTimer();") Reset
           |     
-          md-button(ng-click="$ctrl.startTimer();") Start {{ form | json }}
+          md-button(ng-click="$ctrl.startTimer();") Start

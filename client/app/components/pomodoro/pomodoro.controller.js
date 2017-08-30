@@ -28,7 +28,7 @@ class PomodoroController {
       if (this.countdown.second <= 0 && this.countdown.minute <= 0) {
         this.stopTimer();
       }
-    }, 1);
+    }, 200);
   };
 
   stopTimer = () => {
