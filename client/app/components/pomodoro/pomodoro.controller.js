@@ -10,6 +10,7 @@ class PomodoroController {
     };
     this.__interval;
     this.isTimerStarted = false;
+    this.isTimerPaused = false;
   }
 
   startTimer = () => {
@@ -31,13 +32,14 @@ class PomodoroController {
     }, 200);
   };
 
-  stopTimer = () => {
+  pauseTimer = () => {
     this.isTimerStarted = false;
     this.$interval.cancel(this.__interval);
     this.__interval = undefined;
   };
 
   resetTimer = () => {
+    this.isTimerStarted = false;
     this.stopTimer();
     this.resetMinutes();
     this.resetSeconds();
